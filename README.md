@@ -28,3 +28,26 @@ Finally, we `JOIN` `t1` and `t2` on a combination of the country and the maximum
 ![This is an image](https://github.com/ZiadHany248/SQL-analysis-Chinook-db/blob/b364a8dd6e9282aa480c5f8d7db55fd30ef69b89/second%20insight.png)
 _This visual only displays the top 50 artists_
 
+
+
+- ### Insight No.3
+_Subject:_ Which tracks were ordered the most?
+
+_Conclusion:_ The track "The Troopers" was ordered the most. Although it must be noted that the difference is so marginal between the most ordered tracks that it may be best to deem this lead contingent
+
+_Code:_ No temporary tables were required for this query. We select the track's name and use the aggregate `COUNT()` to count how many `InvoiceLine.Id` are regeistered under that track. We perform a couple of JOINs to put both tables together and get the result
+This is how the end-result looks
+![This is an image](https://github.com/ZiadHany248/SQL-analysis-Chinook-db/blob/2e129cabad83287c4dfca7a7359afeb604f1e31e/third%20insight.png)
+_This visual only displays the only tracks with 3 or more orders_
+
+
+- ### Insight No.4
+_Subject:_ Does mediatype have an influence on sales?
+
+_Conclusion:_ "MPEG Audio file" type generated the most revenue. There is a vast gap between the highest grossing type and the clossest one to it. This may be because All other types sound bad **or** because not many tracks are available in this format. This would require further investigation
+
+_Code:_ This one required only one temporary table, also called `t1`.  It yields the type's name, the track's name and the total amount paid for it. 
+Having derived that table, we sum the total money paid for each one of the types and `GROUP BY` each of the types. 
+This is how the graph looks. It makes the huge gap between the highest grossing and all the others seem very clear
+![This is an image](https://github.com/ZiadHany248/SQL-analysis-Chinook-db/blob/2e129cabad83287c4dfca7a7359afeb604f1e31e/fourth%20insight.png)
+
