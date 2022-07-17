@@ -14,4 +14,4 @@ _Conclusion:_ The country is The USA, they sell Rock music the most, it must als
 
 _Code:_ Two temporary tables are created: `t1` which through a series of joins yields each track each customer bought belongs to, what it's cost was and to what coutnry it was shipped. We also create a second temporary table `t2` to choose the genre that sold the most from the `t1` using the aggreagte `MAX()`.
 Finally, we `JOIN` `t1` and `t2` on a combination of the country and the maximum purchases to get the final result. This is how it looks
-![This is an image]([first insight.png](https://github.com/ZiadHany248/SQL-analysis-Chinook-db/blob/9b8bc499d093140b9d6d34b8a205e4c9933d7c34/first%20insight.png))
+![This is an image](https://github.com/ZiadHany248/SQL-analysis-Chinook-db/blob/9b8bc499d093140b9d6d34b8a205e4c9933d7c34/first%20insight.png)
